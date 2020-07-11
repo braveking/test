@@ -1,12 +1,10 @@
 pipeline {
-	agent {
-		docker { image 'mcr.microsoft.com/dotnet/core/sdk:3.1-buster' }
-	}
-	stages {
-		stage('build') {
-			steps {
-				sh 'dotnet --version'
-			}
-		}		
-	}
+    agent { docker 'node:6.3' }
+    stages {
+        stage('build') {
+            steps {
+                sh 'npm --version'
+            }
+        }
+    }
 }
